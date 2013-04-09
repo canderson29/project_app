@@ -1,4 +1,14 @@
 ProjectApp::Application.routes.draw do
+  get "static_pages/Home"
+
+  get "static_pages/About"
+
+  get "static_pages/Services"
+
+  get "static_pages/Contact"
+
+  get "static_pages/Subcontractors"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
