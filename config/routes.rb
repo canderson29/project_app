@@ -1,13 +1,10 @@
 ProjectApp::Application.routes.draw do
-  get "static_pages/Home"
+  root to: 'static_pages#home'
 
-  get "static_pages/About"
-
-  get "static_pages/Services"
-
-  get "static_pages/Contact"
-
-  get "static_pages/Subcontractors"
+  match '/about',   to: 'static_pages#about'
+  match '/services', to: 'static_pages#services'
+  match '/contact', to: 'static_pages#contact'
+  match '/subcontractors', to: 'static_pages#subcontractors'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
