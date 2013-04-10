@@ -4,7 +4,7 @@ ProjectApp::Application.routes.draw do
   match '/about',   to: 'static_pages#about'
   match '/services', to: 'static_pages#services'
   match '/contact', to: 'static_pages#contact'
-  match '/subcontractors', to: 'static_pages#subcontractors'
+  match '/projects', to: 'static_pages#projects'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
