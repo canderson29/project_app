@@ -10,6 +10,8 @@
 #  updated_at  :datetime         not null
 #
 
+
+
 class Project < ActiveRecord::Base
   attr_accessible :date, :description, :name
 
