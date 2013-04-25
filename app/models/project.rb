@@ -20,10 +20,17 @@ class Project < ActiveRecord::Base
 
   validates :name, presence: true
   validates :description, presence: true
-  validates :start_date, presence: true, :unless => :valid_date?
+  validates :start_date, presence: true, :unless => :start_must_be_before_end_date
+  validates :end_date, presence: true, :unless => :end_must_be_after_start_date
   
   private
-  def valid_date?
-  	self.start_date < self.end_date
+  def start_must_be_before_end_date
+    errors.add(:start_date, "must be before end date") if
+       self.start_date > self.end_date
+  end 
+
+  def end_must_be_after_start_date
+  	errors.add(:end_date, "must be after start date") if 
+  		self.end_date < self.start_date
   end
 end
