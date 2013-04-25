@@ -1,4 +1,6 @@
 ProjectApp::Application.routes.draw do
+  get "users/new"
+
   resources :testimonials
 
 
