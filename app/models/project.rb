@@ -13,7 +13,7 @@
 #
 
 class Project < ActiveRecord::Base
-  attr_accessible :start_date, :end_date, :description, :name, :service_id
+  attr_accessible :start_date, :end_date, :description, :name
 
   belongs_to :service
   has_many :testimonials
