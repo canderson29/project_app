@@ -1,0 +1,45 @@
+<div class="container">
+  <div class="row-fluid">
+    <h1>Listing testimonials</h1>
+  </div>
+  <div class="row-fluid">
+    <div class="span3">
+      <h2>Comment</h2>
+    </div>
+    <div class="span3">
+      <h2>Name</h2>
+    </div>
+    <div class="span3">
+      <h2>Service</h2>
+    </div>
+    <div class="span3">
+      <h2>Manage</h2>
+    </div>
+  </div>
+  <div class="row-fluid">
+    <div class="span3 center">
+      <% @testimonials.each do |testimonial| %>
+      <%= testimonial.comment %>
+      <% end %>
+    </div>
+    <div class="span3 center">
+      <% @testimonials.each do |testimonial| %>
+      <%= testimonial.name %>
+      <% end %>
+    </div>
+    <div class="span3 center">
+      <% @testimonials.each do |testimonial| %>
+      <%= Service.find(testimonial.service_id).name %>
+      <% end %>
+    </div>
+    <div class="span3 center">
+      <% @testimonials.each do |testimonial| %>
+      <%= link_to 'Show', testimonial %>
+      <%= link_to 'Edit', edit_testimonial_path(testimonial) %>
+      <%= link_to 'Destroy', testimonial, method: :delete, data: { confirm: 'Are you sure?' } %>
+      <% end %>
+    </div>
+  </div>
+  <br />
+  <%= link_to 'New Testimonial', new_testimonial_path %>
+</div>

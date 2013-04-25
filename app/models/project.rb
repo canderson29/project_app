@@ -5,15 +5,15 @@
 #  id          :integer          not null, primary key
 #  name        :string(255)
 #  description :string(255)
-#  date        :date
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
+#  service_id  :integer
+#  start_date  :date
+#  end_date    :date
 #
 
-
-
 class Project < ActiveRecord::Base
-  attr_accessible :date, :description, :name
+  attr_accessible :start_date, :end_date, :description, :name, :service_id
 
   belongs_to :service
 end

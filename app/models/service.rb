@@ -12,5 +12,7 @@
 class Service < ActiveRecord::Base
   attr_accessible :description, :name
 
-  has_many :projects
+  has_many :projects, foreign_key: 'service_id'
+  has_many :testimonials, foreign_key: 'service_id'
+  
 end
