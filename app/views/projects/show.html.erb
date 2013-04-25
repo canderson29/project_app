@@ -11,10 +11,20 @@
 </p>
 
 <p>
-  <b>Date:</b>
-  <%= @project.date %>
+  <b>Start Date:</b>
+  <%= @project.start_date %>
+</p>
+
+<p>
+  <b>End Date:</b>
+  <%= @project.end_date %>
+</p>
+
+<p>
+  <b>Service:</b>
+  <%= Service.find(@project.service_id).name %>
 </p>
 
 
-<%= link_to 'Edit', edit_project_path(@project) %> |
-<%= link_to 'Back', projects_path %>
+<%= link_to 'Edit', edit_service_project_path(@project) %> |
+<%= link_to 'Back', service_projects_path %>

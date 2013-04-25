@@ -4,7 +4,9 @@
   <tr>
     <th>Name</th>
     <th>Description</th>
-    <th>Date</th>
+    <th>Start Date</th>
+    <th>End Date</th>
+    <th>Service</th>
     <th></th>
     <th></th>
     <th></th>
@@ -14,9 +16,11 @@
   <tr>
     <td><%= project.name %></td>
     <td><%= project.description %></td>
-    <td><%= project.date %></td>
-    <td><%= link_to 'Show', project %></td>
-    <td><%= link_to 'Edit', edit_project_path(project) %></td>
+    <td><%= project.start_date %></td>
+    <td><%= project.end_date %></td>
+    <td><%= Service.find(project.service_id).name %></td>
+    <td><%= link_to 'Show', service_projects_path %></td>
+    <td><%= link_to 'Edit', edit_service_project_path(project) %></td>
     <td><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
@@ -24,4 +28,4 @@
 
 <br />
 
-<%= link_to 'New Project', new_project_path %>
+<%= link_to 'New Project', new_service_project_path %>

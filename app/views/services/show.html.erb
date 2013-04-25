@@ -1,15 +1,23 @@
 <p id="notice"><%= notice %></p>
-
-<p>
-  <b>Name:</b>
-  <%= @service.name %>
-</p>
-
-<p>
-  <b>Description:</b>
-  <%= @service.description %>
-</p>
-
+<div class="container">
+	<div class="row-fluid">
+		<div class="span12">
+			<b>Name: </b>
+			<%= @service.name %>
+		</div>
+	</div>
+	<div class="row-fluid">
+		<div class="span12">
+			<b>Description: </b>
+			<%= @service.description %>
+		</div>
+	</div>
+	<div class="row-fluid">
+		<div class="span12">
+			<%= Project.find(@Service.sid).name %>
+		</div>
+	</div>
+</div>
 
 <%= link_to 'Edit', edit_service_path(@service) %> |
 <%= link_to 'Back', services_path %>

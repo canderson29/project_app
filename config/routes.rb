@@ -1,9 +1,10 @@
 ProjectApp::Application.routes.draw do
-  resources :services
+  resources :testimonials
 
 
-  resources :projects
-
+  resources :services do
+    resources :projects
+  end
 
   root to: 'static_pages#home'
 
@@ -11,6 +12,7 @@ ProjectApp::Application.routes.draw do
   match '/services', to: 'static_pages#services'
   match '/contact', to: 'static_pages#contact'
   match '/projects', to: 'static_pages#projects'
+  match '/testimonials', to: 'testimonials#index'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
