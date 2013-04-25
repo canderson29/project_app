@@ -20,5 +20,10 @@ class Project < ActiveRecord::Base
 
   validates :name, presence: true
   validates :description, presence: true
+  validates :start_date, presence: true, :unless => :valid_date?
   
+  private
+  def valid_date?
+  	self.start_date < self.end_date
+  end
 end
