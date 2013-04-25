@@ -2,5 +2,4 @@
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @project %> |
-<%= link_to 'Back', service_projects_path %>
+<%= link_to 'Back', service_project_path(@project.service_id, @project) %>

@@ -16,4 +16,9 @@ class Project < ActiveRecord::Base
   attr_accessible :start_date, :end_date, :description, :name, :service_id
 
   belongs_to :service
+  has_many :testimonials
+
+  validates :name, presence: true
+  validates :description, presence: true
+  
 end

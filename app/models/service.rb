@@ -12,7 +12,9 @@
 class Service < ActiveRecord::Base
   attr_accessible :description, :name
 
-  has_many :projects, foreign_key: 'service_id'
-  has_many :testimonials, foreign_key: 'service_id'
+  has_many :projects, dependent: :destroy
+
+  validates :name, presence: true
+  validates :description, presence: true
   
 end

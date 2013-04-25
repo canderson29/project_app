@@ -16,7 +16,8 @@ ActiveRecord::Schema.define(:version => 20130413202047) do
   create_table "projects", :force => true do |t|
     t.string   "name"
     t.string   "description"
-    t.date     "date"
+    t.date     "start_date"
+    t.date     "end_date"
     t.integer  "service_id"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false

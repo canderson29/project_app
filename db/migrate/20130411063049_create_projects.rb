@@ -3,7 +3,8 @@ class CreateProjects < ActiveRecord::Migration
     create_table :projects do |t|
       t.string :name
       t.string :description
-      t.date :date
+      t.date :start_date
+      t.date :end_date
       t.integer :service_id
       
       t.timestamps

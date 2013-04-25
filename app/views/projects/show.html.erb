@@ -26,5 +26,5 @@
 </p>
 
 
-<%= link_to 'Edit', edit_service_project_path(@project) %> |
-<%= link_to 'Back', service_projects_path %>
+<%= link_to 'Edit', edit_service_project_path(@project.service_id, @project) %> |
+<%= link_to 'Back', service_path(@project.service_id) %>
