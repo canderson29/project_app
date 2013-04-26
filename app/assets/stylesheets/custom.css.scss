@@ -51,7 +51,16 @@ h1 {
 h2 {
   font-size: 1.7em;
   letter-spacing: -1px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: normal;
+  color: $grayLight;
+}
+
+h3 {
+  font-size: 1.3em;
+  letter-spacing: 0px;
+  margin-bottom: 15px;
   text-align: center;
   font-weight: normal;
   color: $grayLight;
@@ -86,7 +95,7 @@ p {
 footer {
   margin-top: 45px;
   padding-top: 5px;
-  border-top: 1px solid $grayMediumLight;
+  border-top: 2px solid $grayMediumLight;
   color: $grayLight;
   a {
     color: $gray;
@@ -216,4 +225,14 @@ input {
       border-bottom: 1px solid $grayLighter;
     }
   }
+}
+
+.top-spacer {
+    margin: 0 0 -10px 0;
+    border-top: 2px solid $grayLighter;
+}
+
+.bottom-spacer {
+    margin: 0 0 10px 0;
+    border-bottom: 2px solid $grayLighter;
 }

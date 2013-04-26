@@ -1,32 +1,36 @@
 <div class="container">
 	<div class="row-fluid">
-		<div class="span12">
-			<b>Name: </b>
-			<%= @service.name %>
+		<div class="span12 center">
+			<h1><%= @service.name %></h1>
 		</div>
 	</div>
 	<div class="row-fluid">
-		<div class="span12">
-			<b>Description: </b>
+		<div class="span12 center">
 			<%= @service.description %>
 		</div>
 	</div>
 	<div class="row-fluid">
-		<div class="span12">
-			<b>Projects: </b>
+		<div class="span12 center">
+			<h2>Projects </h2>
 			<% @selected = Project.all %>
 			<% @selected.each do |project| %>
 				<% if (project.service_id == @service.id) %>
 					<div class="row-fluid">
+						<div class="span2 offset5 center">
 						<%= link_to project.name, service_project_path(@service.id,project) %>
+					</div>
 					</div>
 				<% end %>
 			<% end %>
 		</div>
 	</div>
 	<div class="row-fluid">
-		<%= link_to 'Add Project', new_service_project_path(@service) %> |
-		<%= link_to 'Edit Service', edit_service_path(@service) %> |
-		<%= link_to 'Back', services_path %>
+		<div class="span3">
+			<% if signed_in? %>
+			<%= link_to 'Add Project', new_service_project_path(@service) %> |
+			<%= link_to 'Edit Service', edit_service_path(@service) %> |
+			<% end %>
+			<%= link_to 'Back', services_path %>
+		</div>
 	</div>
 </div>
