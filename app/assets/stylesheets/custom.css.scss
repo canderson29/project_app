@@ -35,6 +35,10 @@ textarea {
   }
 }
 
+.left {
+  text-align: left;
+}
+
 /* typography */
 
 h1, h2, h3, h4, h5, h6 {
@@ -195,6 +199,10 @@ input, textarea, select, .uneditable-input {
   @include box_sizing;
 }
 
+select {
+  width: 15%;
+}
+
 input {
   height: auto !important;
 }
@@ -212,6 +220,10 @@ input {
   @extend .error;
  }
 
+ .select-date {
+    display: inline;
+ }
+
  /* users index */
 
 .users {
@@ -226,7 +238,18 @@ input {
     }
   }
 }
+/* MyCSS */
 
+.border {
+    margin: 0 0 -10px 0;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: $grayLighter;
+}
+.low-border {
+    margin: 0 -10px 10px 10px;
+    border-bottom: 2px solid black;
+}
 .top-spacer {
     margin: 0 0 -10px 0;
     border-top: 2px solid $grayLighter;
