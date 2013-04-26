@@ -1,4 +1,5 @@
 class ServicesController < ApplicationController
+  load_and_authorize_resource
 
   def index
     @services = Service.all
@@ -7,7 +8,7 @@ class ServicesController < ApplicationController
   def show
     @service = Service.find(params[:id])
   end
-
+ 
   def new
     @service = Service.new
   end

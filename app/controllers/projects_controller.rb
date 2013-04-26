@@ -1,5 +1,6 @@
 class ProjectsController < ApplicationController
   before_filter :get_service
+  load_and_authorize_resource
  
   def index
     @projects = Project.all
