@@ -15,7 +15,7 @@
       </div>
   </div>
   <div class="row-fluid">
-    <% if signed_in? %>
+    <% if is_admin? %>
     <%= link_to 'Edit', edit_service_project_path(@project.service_id, @project) %> |
     <%= link_to 'Delete', service_project_path(@service), method: :delete, data: { confirm: 'Are you sure?' } %> |
     <% end %>
