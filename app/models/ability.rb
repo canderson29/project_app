@@ -8,7 +8,8 @@ class Ability
   if user.admin? 
     can :crud, :all
   else
-    can :read, :all
+    can :read, :all;
+    can :create, User;
   end
     #
     # The first argument to `can` is the action you are giving the user 
